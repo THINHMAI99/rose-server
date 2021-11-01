@@ -1,8 +1,8 @@
 class Orchid{
-    constructor(orchid_id, category, description, humidity, 
+    constructor(Rose_id, Height, description, humidity, 
                 intermediate, location, name, url_m, science_name, warm, note){
-        this.orchid_id = orchid_id;
-        this.category = category;
+        this.Rose_id = Rose_id;
+        this.Height = Height;
         this.description = description;
         this.humidity = humidity;
         this.intermediate = intermediate;

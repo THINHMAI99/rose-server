@@ -18,16 +18,16 @@ const getAllOrchids = async (req, res) => {
                 console.log(element)
                 const orchild = new Orchid(
                     element.id,
-                    element.data().category,
-                    element.data().description,
-                    element.data().humidity,
-                    element.data().intermediate,
-                    element.data().location,                   
-                    element.data().name,
-                    element.data().url_m,
-                    element.data().science_name,                   
-                    element.data().warm,
-                    element.data().note
+                    element.data().Appellation,
+                    element.data().Bloom_size,
+                    element.data().Habit,
+                    element.data().Height,
+                    element.data().Name,                   
+                    element.data().Petal_count,
+                    element.data().Position,
+                    element.data().Uses,                   
+                    element.data().url,
+                   // element.data().note
                 );
                 orchidsArray.push(orchild);
             });
