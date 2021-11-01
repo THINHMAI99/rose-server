@@ -1,6 +1,6 @@
 class Orchid{
     constructor(Rose_id, Appellation, Bloom_size, Habit, 
-        Height, Name, Position, Uses, Petal_count, url, note){
+        Height, Name,Petal_count, Position, Uses, url){
         this.Rose_id = Rose_id;
         this.Appellation = Appellation;
         this.Bloom_size = Bloom_size;
@@ -11,7 +11,7 @@ class Orchid{
         this.Position = Position;
         this.Uses = Uses;
         this.url = url;
-       // this.note = note;
+    
     }
 }
 
