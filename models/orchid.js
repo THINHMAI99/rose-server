@@ -1,4 +1,4 @@
-class Orchid{
+class rose{
     constructor(Rose_id, Appellation, Bloom_size, Habit, 
         Height, Name,Petal_count, Position, Uses, url){
         this.Rose_id = Rose_id;
@@ -15,4 +15,4 @@ class Orchid{
     }
 }
 
-module.exports = Orchid
+module.exports = rose
