@@ -6,7 +6,7 @@ const firestore = firebase.firestore();
 
 const getAllroses = async (req, res) => {
     try{
-        const roses = await firestore.collection('roses');
+        const roses = await firestore.collection('orchids');
         
         const data = await roses.get();
         const rosesArray = [];
