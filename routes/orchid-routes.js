@@ -1,9 +1,9 @@
 const express = require('express');
-const { getAllOrchids, getOrchid} = require('../controllers/orchidController')
+const { getAllroses, getrose} = require('../controllers/roseController')
 const router = express.Router();
 
-router.get('/orchids', getAllOrchids);
-router.get('/orchid/:uid', getOrchid);
+router.get('/roses', getAllroses);
+router.get('/rose/:uid', getrose);
 
 module.exports = {
     routes: router

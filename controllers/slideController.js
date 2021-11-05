@@ -6,7 +6,7 @@ const firestore = firebase.firestore();
 
 const getAllSlides = async (req, res) => {
     try{
-        const feeds = await firestore.collection('slide_orchids');
+        const feeds = await firestore.collection('slide_roses');
         
         const data = await feeds.get();
         const feedsArray = [];

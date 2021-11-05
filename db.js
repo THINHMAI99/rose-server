@@ -22,8 +22,8 @@ const db = admin.initializeApp({
 
 //     menu.forEach(function(obj) {
 //       firestore
-//         .collection('orchids')
-//         .doc(obj.orchid_id)
+//         .collection('roses')
+//         .doc(obj.rose_id)
 //         .set(obj)
 //         .then(function(docRef) {
 //           console.log("Document written");
