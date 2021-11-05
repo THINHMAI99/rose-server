@@ -1,22 +1,22 @@
 'use strict';
 
 const firebase = require('../db');
-const rose = require('../models/rose');
+const Orchid = require('../models/orchid');
 const firestore = firebase.firestore();
 
-const getAllroses = async (req, res) => {
+const getAllOrchids = async (req, res) => {
     try{
-        const roses = await firestore.collection('roses');
+        const orchids = await firestore.collection('orchids');
         
-        const data = await roses.get();
-        const rosesArray = [];
+        const data = await orchids.get();
+        const orchidsArray = [];
         if (data.empty){
-            res.status(404).send('No rose record found');
+            res.status(404).send('No orchid record found');
         }
         else{
             data.forEach(element => {
                 console.log(element)
-                const orchild = new rose(
+                const orchild = new Orchid(
                     element.id,
                     element.data().Appellation,
                     element.data().Bloom_size,
@@ -29,9 +29,9 @@ const getAllroses = async (req, res) => {
                     element.data().url,
                    // element.data().note
                 );
-                rosesArray.push(orchild);
+                orchidsArray.push(orchild);
             });
-            res.send(rosesArray);
+            res.send(orchidsArray);
         }
     }
     catch(error){
@@ -39,13 +39,13 @@ const getAllroses = async (req, res) => {
     }
 }
 
-const getrose = async(req, res, next) => {
+const getOrchid = async(req, res, next) => {
     try{
         const uid = req.params.uid;
-        const rose = await firestore.collection('roses').doc(uid);
-        const data = await rose.get();
+        const orchid = await firestore.collection('orchids').doc(uid);
+        const data = await orchid.get();
         if (!data.exists){
-            res.status(404).send('rose with the given ID not found');
+            res.status(404).send('Orchid with the given ID not found');
         }else{
             res.send(data.data());
         }
@@ -56,6 +56,6 @@ const getrose = async(req, res, next) => {
 }
 
 module.exports = {
-    getAllroses,
-    getrose
+    getAllOrchids,
+    getOrchid
 }
