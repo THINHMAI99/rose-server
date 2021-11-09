@@ -47,6 +47,7 @@ const getInfoAI = async (req, res) => {
                 }
                 //Tách mảng thì các chuỗi keyword
                 result = [].concat.apply([], kq);
+                console.log("result rose");
                 console.log(result);
             }
         }
